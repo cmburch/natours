@@ -50,12 +50,14 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align:center;
 }
 .heading-primary {
     color: #fff;
     text-transform: uppercase;
 
     backface-visibility: hidden;
+    margin-bottom: 60px;
 }
 .heading-primary-main {
     display:block;
@@ -78,10 +80,10 @@ body {
 @keyframes moveInLeft {
     0% {
         opacity:0;
-        transform: translate(-100px);
+        transform: translateX(-100px);
     }
     80% {
-        transform: translate(10px);
+        transform: translateX(10px);
     }
     100% {
         opacity:1;
@@ -94,13 +96,32 @@ body {
 @keyframes moveInRight {
     0% {
         opacity:0;
-        transform: translate(100px);
+        transform: translateX(100px);
     }
     80% {
-        transform: translate(-10px);
+        transform: translateX(-10px);
     }
     100% {
         opacity:1;
         transform: translate(0);
     }
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    display:inline-block;
+    padding:15px 40px;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+.btn:active {
+    transform: translateY(-1px);
+}
+.btn-white {
+    background: #ffffff;
+    color:#777;
 }
